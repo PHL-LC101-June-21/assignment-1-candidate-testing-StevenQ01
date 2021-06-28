@@ -45,7 +45,7 @@ for(let i=0; i < candidateAnswers.length; i++) {
     }
   } 
   let quizGrade = numberOfCorrectAnswers.length / questions.length*100;
-  console.log(`>>>Your grade: ${quizGrade} <<<`);
+  console.log(`>>> Your grade: ${quizGrade} <<<`);
     if (quizGrade >= 80){
       console.log(`>>> Status: Passed <<<`)
     } else {
