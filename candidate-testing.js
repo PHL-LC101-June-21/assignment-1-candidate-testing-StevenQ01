@@ -1,11 +1,8 @@
 const input = require('readline-sync');
-
 // TODO 2: modify your quiz app to ask 5 questions //
-
 // TODO 1.1a: Define candidateName // 
 let candidateName = (" ");
 // TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
-
 let question = ("Who was the first American Woman in space? ");
 let correctAnswer = "Sally Ride";
 let candidateAnswer;
@@ -13,14 +10,11 @@ let questions = ["Who was the first American Woman in space? ", "True or False: 
 let correctAnswers = ["Sally Ride", "true", "40", "Trajectory", "3"];
 let candidateAnswers = [];
 //et quizAnswers = [];
-
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
-let candidateName = input.question("Candidate Name: ");
-console.log("Hello " + candidateName)
+  let candidateName = input.question("Candidate Name: ");
+  console.log("Hello " + candidateName)
 }
-
-
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
   //candidateAnswer = input.question(question);
@@ -29,12 +23,9 @@ function askQuestion() {
    candidateAnswers.push(input.question(questions[i]));
   }
 }
-
 function gradeQuiz(candidateAnswers) {
-let numberOfCorrectAnswers = [];
-  
-
-for(let i=0; i < candidateAnswers.length; i++) {
+  let numberOfCorrectAnswers = [];
+  for(let i=0; i < candidateAnswers.length; i++) {
     if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()) {
       numberOfCorrectAnswers.push(candidateAnswers[i]);
       console.log(`Your answer: ${candidateAnswers[i]} Correct answer ${correctAnswers[i]} `);
@@ -51,6 +42,7 @@ for(let i=0; i < candidateAnswers.length; i++) {
     } else {
       console.log(`>>> Status: Failed <<< `)    
   }
+  return quizGrade
 }
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
 /*if (candidateAnswer.toLowerCase() === correctAnswer.toLowerCase()){
