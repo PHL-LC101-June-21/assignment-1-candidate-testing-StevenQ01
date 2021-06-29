@@ -42,7 +42,7 @@ function gradeQuiz(candidateAnswers) {
     } else {
       console.log(`>>> Status: Failed <<< `)    
   }
-  return quizGrade
+  return quizGrade;
 }
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
 /*if (candidateAnswer.toLowerCase() === correctAnswer.toLowerCase()){
